@@ -1,0 +1,6 @@
+---
+Name: linkable-dataobjects-extensions
+---
+HtmlEditorField_Toolbar:
+  extensions:
+    - Custom_HtmlEditorField_Toolbar
