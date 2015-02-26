@@ -28,11 +28,11 @@ class Custom_HtmlEditorField_Toolbar extends Extension{
 		
 		$linkables = ClassInfo::implementorsOf('Linkable');
 		foreach ($linkables as $class) {
-			
-			$options[strtolower($class)] = $class::LinkLabel();
+			$identifier = str_replace('\\', '-', strtolower($class));			
+			$options[$identifier] = $class::LinkLabel();
 			$linkTipe->setSource($options);
 
-			$dropdown = new DropdownField(strtolower($class), _t('HtmlEditorField.NEWS', $class::LinkLabel()), $class::get()->map('ID', 'Title'));
+			$dropdown = new DropdownField($identifier, _t('HtmlEditorField.NEWS', $class::LinkLabel()), $class::get()->map('ID', 'Title'));
 			$dropdown->addExtraClass('linkabledo');
 			$compositeField->push($dropdown);
 		}
