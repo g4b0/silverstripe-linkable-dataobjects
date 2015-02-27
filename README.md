@@ -142,7 +142,7 @@ Here you are a sample page holder, needed to implement the Link() function into 
 	}
 
 ### Register your shortcode handlers in your _config.php	
-:::php
+	:::php
 	ShortcodeParser::get('default')->register('yournamespace_yourclass_link', array('YourNamespace\YourClass', 'link_shortcode_handler'));
 	
 
