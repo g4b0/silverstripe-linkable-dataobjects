@@ -34,7 +34,7 @@ class Custom_HtmlEditorField_Toolbar extends Extension{
 
 			$dropdown = new DropdownField(strtolower($class), _t('HtmlEditorField.NEWS', $class::LinkLabel()), $class::get()->map('ID', 'Title'));
 			$dropdown->addExtraClass('linkabledo');
-			$compositeField->push($dropdown);
+                        $compositeField->insertBefore($dropdown, 'Description');
 		}
 		
 		return $form;
