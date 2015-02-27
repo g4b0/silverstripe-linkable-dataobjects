@@ -1,4 +1,4 @@
-# Searchable DataObjects
+# Linkable DataObjects
 
 Linkable DataObjects is a module that permit to link DataObjects from TinyMCE.
 
@@ -140,6 +140,11 @@ Here you are a sample page holder, needed to implement the Link() function into 
 			}
 		}
 	}
+
+### Register your shortcode handlers in your _config.php	
+:::php
+	ShortcodeParser::get('default')->register('yournamespace_yourclass_link', array('YourNamespace\YourClass', 'link_shortcode_handler'));
+	
 
 Flush your cache and start linking your DataObjects.
 
