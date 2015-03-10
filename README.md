@@ -25,7 +25,7 @@ Install the module through [composer](http://getcomposer.org):
 Make the DataObject implement Linkable interface (you need to implement Link(), LinkLabel(), link_shortcode_handler():
 
 	:::php
-	class DoNews extends DataObject implements Searchable {
+	class DoNews extends DataObject implements Linkable {
 
 		private static $db = array(
 				'Title' => 'Varchar',
