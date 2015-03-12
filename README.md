@@ -68,17 +68,17 @@ class DoNews extends DataObject implements Linkable {
 	 }
 
 	 $id =  $arguments['id'];
-	 $page = DataObject::get_one(__CLASS__, "ID=$id");
+	 $do = DataObject::get_one(__CLASS__, "ID=$id");
 
-	 if (!$page) {
-		 $page = DataObject::get_one('ErrorPage', '"ErrorCode" = \'404\'');
-		 return $page->Link();
+	 if (!$do) {
+		 $do = DataObject::get_one('ErrorPage', '"ErrorCode" = \'404\'');
+		 return $do->Link();
 	 }
 
 	 if ($content) {
-		 return sprintf('<a href="%s">%s</a>', $page->Link(), $parser->parse($content));
+		 return sprintf('<a href="%s">%s</a>', $do->Link(), $parser->parse($content));
 	 } else {
-		 return $page->Link();
+		 return $do->Link();
 	 }
  }
 }
