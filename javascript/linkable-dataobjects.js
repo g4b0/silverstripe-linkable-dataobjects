@@ -59,7 +59,7 @@ var ss = ss || {};
 						
 					default:
 						var name=this.find(':input[name=LinkType]:checked').val();
-						href = '['+name+'_link,id=' + this.find(':input[name='+name+']').val() + ']';
+						href = '['+name.replace('-', '_')+'_link,id=' + this.find(':input[name='+name+']').val() + ']';
 						break;
 						
 					/* /g4b0 */
