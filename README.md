@@ -13,14 +13,14 @@ a Link() function.
 
 ## Requirements
 
- * SilverStripe 3.1
+ * SilverStripe >=3.1 <4.0
 
 ### Installation
 
 Install the module through [composer](http://getcomposer.org):
 
 	composer require zirak/linkable-dataobject
-  composer update
+	composer update
 
 Make the DataObject implement Linkable interface (you need to implement Link(), LinkLabel(), link_shortcode_handler():
 
