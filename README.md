@@ -19,7 +19,7 @@ a Link() function.
 
 Install the module through [composer](http://getcomposer.org):
 
-	composer require zirak/linkable-dataobject
+	composer require zirak/linkable-dataobjects
 	composer update
 
 Make the DataObject implement Linkable interface (you need to implement Link(), LinkLabel(), link_shortcode_handler():
