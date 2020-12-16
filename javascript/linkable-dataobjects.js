@@ -33,10 +33,10 @@ var ss = ss || {};
 						href = '#' + anchor; 
 						break;
 					
-					case 'file':
-						href = '[file_link,id=' + this.find(':input[name=file]').val() + ']';
-						target = '_blank';
-						break;
+                    case 'file':
+                        href = '[file_link,id=' + this.find('.ss-uploadfield .ss-uploadfield-item').attr('data-fileid') + ']';
+                        target = '_blank';
+                        break;
 					
 					case 'email':
 						href = 'mailto:' + this.find(':input[name=email]').val();
